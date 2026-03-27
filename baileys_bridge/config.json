@@ -1,8 +1,8 @@
 {
-  "name": "Iteology WhatsApp",
+  "name": "WhatsApp Connector",
   "version": "1.3.0",
   "slug": "baileys_bridge",
-  "description": "Iteology WhatsApp connector for Home Assistant (QR, send, inbound webhook). Uses a WhatsApp-compatible technology layer; service availability depends on upstream support. The developer will attempt compatibility updates if upstream changes. Use at your own risk.",
+  "description": "WhatsApp connector for Home Assistant (QR, send, inbound webhook). Uses a WhatsApp-compatible technology layer; service availability depends on upstream support. The developer will attempt compatibility updates if upstream changes. Use at your own risk.",
   "startup": "services",
   "boot": "auto",
   "init": false,
@@ -51,7 +51,7 @@
   },
   "webui": "http://[HOST]:[PORT:3100]",
   "panel_icon": "mdi:whatsapp",
-  "panel_title": "Iteology WhatsApp",
+  "panel_title": "WhatsApp Connector",
   "ingress": true,
   "ingress_port": 3100,
   "changelog": {

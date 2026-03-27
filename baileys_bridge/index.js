@@ -329,7 +329,7 @@ function renderDashboard() {
       : `Locked${licenseState.reason ? ` • ${licenseState.reason}` : ''}`;
 
   return `<!doctype html><html><head><meta charset="utf-8"/>
-  <title>Iteology WhatsApp</title>\n  <link rel="icon" type="image/svg+xml" href="${ITEOLOGY_ICON}"/>
+  <title>WhatsApp Connector</title>\n  <link rel="icon" type="image/svg+xml" href="${ITEOLOGY_ICON}"/>
   <style>
   body{font-family:system-ui,Segoe UI,Arial,sans-serif;max-width:1100px;margin:18px auto;padding:0 12px}
   .row{display:flex;gap:12px;flex-wrap:wrap}.card{border:1px solid #ddd;border-radius:10px;padding:12px;flex:1 1 330px}
@@ -338,7 +338,7 @@ function renderDashboard() {
   code{background:#f3f3f3;padding:2px 4px;border-radius:4px}
   form{margin:8px 0}
   </style></head><body>
-  <h2 style="display:flex;align-items:center;gap:10px"><img src="${ITEOLOGY_ICON}" alt="Iteology WhatsApp" style="width:38px;height:38px;border-radius:9px"/>Iteology WhatsApp</h2>\n  <p><a href="https://whatsappha.webeology.app" target="_blank" rel="noopener noreferrer">Visit Iteology WhatsApp</a></p>
+  <h2 style="display:flex;align-items:center;gap:10px"><img src="${ITEOLOGY_ICON}" alt="WhatsApp Connector" style="width:38px;height:38px;border-radius:9px"/>WhatsApp Connector</h2>\n  <p><a href="https://whatsappha.webeology.app" target="_blank" rel="noopener noreferrer">Visit WhatsApp Connector</a></p>
   <p><b>Status:</b> ${status} ${reconnecting ? '(reconnecting...)' : ''}<br/><b>Self JID:</b> ${selfJid || '-'}<br/><b>License:</b> ${licenseText}</p>
   ${err}
   <div class="row">
@@ -648,7 +648,7 @@ async function startSock(force = false) {
 }
 
 app.listen(PORT, async () => {
-  console.log(`Iteology WhatsApp Connector listening on :${PORT}`);
+  console.log(`WhatsApp Connector Connector listening on :${PORT}`);
   maybePruneLogs(true);
   loadLocalLicense();
   ensureInstanceFingerprint();
