@@ -1,0 +1,66 @@
+{
+  "name": "Iteology WhatsApp",
+  "version": "1.3.0",
+  "slug": "baileys_bridge",
+  "description": "Iteology WhatsApp connector for Home Assistant (QR, send, inbound webhook). Uses a WhatsApp-compatible technology layer; service availability depends on upstream support. The developer will attempt compatibility updates if upstream changes. Use at your own risk.",
+  "startup": "services",
+  "boot": "auto",
+  "init": false,
+  "arch": [
+    "amd64",
+    "aarch64",
+    "armv7",
+    "armhf",
+    "i386"
+  ],
+  "host_network": false,
+  "ports": {
+    "3100/tcp": 3100
+  },
+  "ports_description": {
+    "3100/tcp": "WhatsApp Connector API / QR UI"
+  },
+  "map": [
+    "config:rw"
+  ],
+  "options": {
+    "auth_token": "change-me",
+    "webhook_url": "https://10.0.13.254:8123/api/webhook/whatsapp_inbound_command",
+    "webhook_bearer": "",
+    "allowlist": "27826804473",
+    "allow_all_inbound": false,
+    "log_retention_days": 30,
+    "license_server_url": "https://walicense.webeology.app",
+    "license_email": "",
+    "license_key": "",
+    "connection_help": "Open Web UI to view link status and use Reconnect.",
+    "script_usage_help": "Use script.whatsapp_send with target and message. Title is optional and ignored for delivery."
+  },
+  "schema": {
+    "auth_token": "str",
+    "webhook_url": "str",
+    "webhook_bearer": "str?",
+    "allowlist": "str?",
+    "allow_all_inbound": "bool?",
+    "log_retention_days": "int(1,3650)?",
+    "license_server_url": "str",
+    "license_email": "str?",
+    "license_key": "str?",
+    "connection_help": "str?",
+    "script_usage_help": "str?"
+  },
+  "webui": "http://[HOST]:[PORT:3100]",
+  "panel_icon": "mdi:whatsapp",
+  "panel_title": "Iteology WhatsApp",
+  "ingress": true,
+  "ingress_port": 3100,
+  "changelog": {
+    "1.3.0": "Added built-in licensing workflow (7-day trial, activate/release, buy-link) and enforcement for send/inbound features.",
+    "1.2.3": "Moved to add-on-only UX, added config help text for link/reconnect and script usage, and removed dependency on custom dashboard.",
+    "1.2.2": "Stability and startup fixes, plus updated panel naming.",
+    "1.2.1": "Added reconnect control, send/receive logs with retention, and CSV export.",
+    "1.2.0": "Improved connection handling and configuration controls.",
+    "1.0.3": "Initial connector release."
+  },
+  "url": "https://whatsappha.webeology.app"
+}
