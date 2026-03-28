@@ -1,6 +1,6 @@
 please note i just launched this addon 27 March 2026
 
-the plug in may be buggy I am mworking on it 
+The plug in may be buggy I am working on it 
 ------
 
 This Home Assistant WhatsApp add-on enables reliable message sending with planned support for receiving messages, media, and automation triggers. It is designed as a maintained, evolving solution rather than a one-time project, with ongoing improvements as WhatsApp changes. Future updates will include inbound message handling, command-based automation, and optional advanced features. The add-on follows a structured approach where messages can trigger Home Assistant events or automations. A small yearly fee helps fund continuous development, updates, and support to keep the integration stable and improving over time.
